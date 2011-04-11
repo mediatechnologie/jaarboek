@@ -1,0 +1,66 @@
+
+	elke leerling met fotootje
+		( IV , GV , MT , AV , RV , GD , MM )
+
+	settings-pagina per student?
+		twitter
+		flickr
+		facebook
+		
+		projecten
+			afbeeldingen
+			teksten?
+
+		oplever-gegevens/-benodigdheden ( van ict ):
+			naam
+			nummer
+			richting
+			foto van gezicht // avatar
+
+wat wordt er door het schoolfilter tegengehouden?
+
+	wachtwoordinvulscherm( en andere data)
+		leerlingen hun wachtwoord emailen.
+
+		daarna door gebruikers te uploaden :
+			beschrijving van jezelf.
+
+			project-gegevens
+				naam
+				beschrijving
+				content
+					kan leeg blijven
+					afbeeldingen
+						jpg/png/gif
+					filmpjes
+						youtube-mogelijkheden voor uploaden vanuit eigen site?
+		per account wat `weetjes`
+			hoeveel getypte tekens
+			hoeveel geüploade afbeeldingen
+			
+			extra: bezoekersweetjes
+
+	zoekfunctie
+		zoeken op `alles`
+
+	voor uitreiking examens moet website online staan
+		31 juni 2011
+		
+	de projecten van grafisch vormgevers zijn al aanwezig
+
+	wachtwoorden koppelen vanuit een activatie-link
+		standaardgegevens vanuit de door ict aangeleverde data
+	beschrijving van jezelf
+		standaardbeschrijving : ik ben te lui om iets in te vullen
+
+aanwezigen bij nabespreking :
+	simon , cees , mark , bas , rick
+
+
+examen.ma-cloud.nl
+ma-jaarboek.nl ?
+
+
+	16 sponsoren met logos die direct verwijzen naar hun (evt. )externe pagina/site
+
+
