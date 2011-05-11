@@ -1,0 +1,144 @@
+/* -- all pages except home gallery -- */
+div#content {
+/*
+	width:960px;
+	height:100%;
+	margin:20px auto;
+*/
+	height: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 110px;
+    width: 960px;
+}
+div#content div#previous{
+	padding-top:15px;
+	height:50px;
+	font-size:0.7em;
+	color:#5a5a5a;
+}
+
+/* -- left block -- */
+div#content div#profile {
+	float:left;
+	width:255px;
+	margin-right:35px;
+}
+div#content div#profile #studentInfo h3 {
+	padding:0px;
+	font-size:1.1em;
+}
+div#content div#profile #studentInfo p {
+	font-size:0.7em;
+	color:#bcbcbc;
+	font-family:arial;
+}
+div#content div#profile #studentInfo {
+	width:100%;
+	height:88px;
+	margin-right:20px;
+}
+div#content div#profile div#thumb img {
+	float:left;
+	width:85px;
+	height:85px;
+	margin:0 10px 0 0;
+	border:1px solid black;
+}
+div#content div#profile div#social a {
+	float:left;
+	width:16px;
+	height:16px;
+	margin:0 5px 0 0;
+	padding:0px;
+	border:0px solid;
+}
+div#content div#profile div#social a:hover {
+	cursor:pointer;
+}
+div#content div#profile div#description {
+	width:100%;
+	height:245px;
+	margin-top:10px;
+}
+div#content div#profile div#description p {
+	font-size:0.7em;
+	color:#bcbcbc;
+	font-family:arial;
+}
+div#content div#profile div#stats {
+	width:100%;
+	height:100%;
+}
+div#content div#profile div#stats ul li {
+	font-family:courier new;
+	font-size:0.7em;
+	color:#868686;
+	line-height:1.7em;
+}
+/* -- end left block -- */
+
+/* -- start center block -- */
+div#content div#bigThumb {
+	float:left;
+	width:380px;
+	height:475px;
+	margin-right:35px;
+}
+div#content div#bigThumb div#bigTitle {
+	height:30px;
+	margin-bottom:10px;
+}
+div#content div#bigThumb div#bigTitle h1 {
+	font-size:1.1em;
+	color:#121212;
+}
+
+
+/* -- end center block -- */
+
+div#content div#about {
+	float:left;
+	width:251px;
+	height:415px;
+}
+div#content div#about div#desc {
+	height:304px;
+}
+div#content div#about div#desc h1 {
+	font-size:1.1em;
+	color:#a4a4a4;
+	margin-bottom:15px;
+}
+div#content div#about div#desc p{
+	font-size:0.7em;
+	color:#bcbcbc;
+	font-family:arial;
+}
+div#content div#about div#more {
+	position:relative;
+}
+div#content div#about div#more a.move{
+	width:10px;
+	height:18px;
+	position:absolute;
+	background-image: url('../images/profile/more/arrow.png');
+	text-decoration:none;
+	}
+div#content div#about div#more h1 {
+	font-size:1.1em;
+	color:#a4a4a4;
+	margin-bottom:15px;
+}
+div#content div#about div#more ul {
+	padding:0px;
+	margin:0px;
+}
+div#content div#about div#more ul li {
+	float:left;
+	width:75px;
+	height:75px;
+	margin-right:5px;
+	padding:0px;
+	border:1px solid black;
+}

@@ -1,0 +1,25 @@
+/* -- Global  parameters-- */
+* {
+	margin:0px;
+	outline:none;
+}
+html {
+	height:100%;
+}
+body {
+	margin:0px auto;
+	width:100%;
+	height:100%;
+}
+ul, li, img, p {
+	list-style-type:none;
+	border:0px;
+	padding:0px;
+	margin:0px;
+}
+div#container {
+	width:100%;
+	min-height:100%;
+	height:100%;
+	position:relative;
+}

@@ -1,0 +1,89 @@
+/* -- Home thumbgallery -- */
+
+div#contentHome {
+	width:100%;
+	height:500px;
+}
+div#contentHome ul {
+	margin:0 0 0 -200px;
+	float:left;
+	padding:0px;
+	top:100px;
+	overflow:hidden;
+	position:absolute;
+}
+div#contentHome ul li{
+	width:48px;
+	height:48px;
+	margin:0px;
+	padding:0px;
+	float:left;
+}
+div#contentHome ul li a{
+	cursor:pointer;
+	width:48px;
+	height:48px;
+	position:relative;
+	display:block;
+	
+}
+div#contentHome ul li a:hover{
+	cursor:pointer;
+	
+}
+div#contentHome .shadowLeft, 
+div#contentHome .shadowRight {
+	height:100%;
+	position:absolute;
+	pointer-events: none;
+	z-index:2;
+}
+div#contentHome .shadowLeft {
+	width:200px;
+	margin:0px;
+	pointer-events: none;
+	top:0px;
+	left:200px;
+	background-image: url(../images/shadowLeft.png);
+	background-repeat:repeat-y;
+}
+div#contentHome .shadowRight {
+	width:200px;
+	margin:0px;
+	pointer-events: none;
+	top:0px;
+	right:0px;
+	background-image: url(../images/shadowRight.png);
+	background-repeat:repeat-y;
+}
+/* -- Footer to stick bottom -- */
+div#push {
+	clear: both;
+	overflow:auto;
+	/*padding-bottom: 200px;*/
+	z-index:-5;
+}
+div#footerContainer {
+	/*margin-top: -200px;  negative value of footer height, change also the padding-bottom at div#push & this height to the value in possitive*/
+	height: 200px;
+	/* clear:both; */
+	width:100%;
+	position: relative;
+	bottom:0;
+	background-color:#f6f6f6;
+	z-index:20;
+	box-shadow: 0px 0px 7px 0px #6b6b6b;
+}
+div#footerContainer ul.footerBlocks{
+	width:800px;
+	overflow:hidden;
+	margin:0px auto;
+	padding:0px;
+}
+div#footerContainer ul.footerBlocks li{
+	width:220px;
+	height:150px;
+	margin:25px 30px 0 0;
+	background-color:#ddd;
+	float:left;
+}

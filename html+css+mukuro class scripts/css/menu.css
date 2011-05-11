@@ -1,0 +1,58 @@
+/* -- Navigation on top of the website -- */
+div#topContainer {
+	background-color: #F6F6F6;
+    box-shadow: 0 0 7px 0 #6B6B6B;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+}
+div#topContainer #nav {
+	width:960px;
+	height: 100%;
+	margin:0px auto;
+	padding-top: 10px;
+	z-index:30;
+}
+
+/* -- logo on top of the website -- */
+div#topContainer #nav #logo{
+	width:200px;
+	height:90px;
+	float:left;
+}
+
+/* -- Menu items on top of the website -- */
+div#topContainer #nav ul {
+	height:59px;
+	float:left;
+	margin:0px;
+    padding: 31px 0 0 50px;
+	list-style-type:none;
+	
+	font-family:courier new;
+	font-size:1.1em;
+	color:#2f2f2f;
+}
+div#topContainer #nav ul li{
+	float:left;
+	margin-right:15px;
+	list-style-type:none;
+}
+div#topContainer #nav ul li a{
+	text-decoration:none;
+	padding:5px 8px 5px 8px;
+	color:#2f2f2f;
+}
+div#topContainer #nav ul li a:hover {
+	background-color:#2f2f2f;
+	color:#fff;
+	padding:5px 8px 5px 8px;
+}
+
+/* -- Search on top of the website -- */
+div#topContainer #search {
+	height:59px;
+	float:left;
+    padding: 28px 0 0 7px;
+}
