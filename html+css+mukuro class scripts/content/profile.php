@@ -6,7 +6,7 @@ if(isset($_GET['id']))
 	$db->kijk($_GET['id']);
 ?>
 <div id="content">
-	<div id="previous"><a href="#">< terug naar het overzicht</a></div>
+	<div id="previous"><a href="#">&lt; terug naar het overzicht</a></div>
 	<div id="profile">
 		<div id="studentInfo">
 			<div id="thumb">

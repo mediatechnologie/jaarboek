@@ -1,8 +1,27 @@
 <?php
 //@todo[~immeëmosol, lun 2011-05-09, 16:22.46 CEST]
 //  uitschrijven van de setter-methodes
-class LeerlingData
+class LeerlingData implements IteratorAggregate , ArrayAccess
 {
+	private $ai;
+	public function getIterator ()
+	{
+		//vd($this->content);
+		if ( !( $this->ai instanceof ArrayIterator ) )
+			$this->ai  =  new ArrayIterator( $this->content );
+		return $this->ai;
+	}
+	public function offsetExists($offset){
+		//dpb();
+//var_dump( $this->getIterator() , $offset );
+		return $this->getIterator()->offsetExists($offset);}
+	public function offsetGet($offset){
+		return $this->getIterator()->offsetGet($offset);}
+	public function offsetSet($offset,$value){
+		return $this->getIterator()->offsetSet($offset,$value);}
+	public function offsetUnset($offset){
+		return $this->getIterator()->offsetUnset( $offset );}
+
 	private $content  =  array(
 		  'leerling_id'     =>  NULL
 		, 'voornaam'        =>  NULL
@@ -14,11 +33,18 @@ class LeerlingData
 		, 'avatar'          =>  NULL
 	);
 
-	public function fromArray( $array )
+	public function pk ()
 	{
-		//vd( $array );
+		return 'leerling_id';
+	}
+
+	//public function __destruct(){vd($this);}
+	public function multiSet ( $array )
+	{
 		foreach ( $array as $k => $v )
 		{
+			if ( !array_key_exists( $k , $this->content ) )
+				die( 'bastard' );
 			$this->set( $k , $v );
 		}
 	}

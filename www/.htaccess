@@ -1,0 +1,10 @@
+<IfModule rewrite_module>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-s
+	RewriteRule . /index.php [L]
+</IfModule>
+<IfModule !rewrite_module>
+	ErrorDocument 404 /index.php
+</IfModule>
