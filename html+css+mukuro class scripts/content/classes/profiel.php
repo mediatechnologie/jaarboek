@@ -11,6 +11,7 @@ Class Profiel
 	var $achternaam;
 	var $richting;
 	var $avatar;
+	var $beschrijving;
 	
 	function haal($user_id)
 	{
@@ -49,6 +50,7 @@ Class Profiel
 			$this->achternaam = $this->gebruikerData['achternaam'];
 			$this->avatar = "images/studenten/".$this->gebruikerData['avatar'];
 			$this->richting = $richt->defineer($this->gebruikerData['richting']);
+			$this->beschrijving = $this->gebruikerData['beschrijving'];
 		}
 	}	
 }

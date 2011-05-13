@@ -4,16 +4,36 @@ include_once 'Defineer_klas.php';
 
 Class Zoek
 {
-	function haal($opdracht)
+	function haal_leerling($leerling_opdracht)
 	{
-		$this->zoeken($opdracht);
+		$this->zoeken_leerling($leerling_opdracht);
 	}
-	private function zoeken($opdracht)
+	function haal_project($project_opdracht)
+	{
+		$this->zoeken_project($project_opdracht);
+	}
+	private function zoeken_project($opdracht)
+	{
+		$con = new Connect();
+		$con->connect();
+		$query = mysql_query($this->returnO($opdracht));
+		$rows=mysql_num_rows($query);
+		if($rows != 0){		
+			while ($row = mysql_fetch_array($query)) {
+				echo "<a href='profile.php?id=" .$row['leerling_id'] . "'>". $row['naam'] . "</a><br/>";
+			}
+		}
+		else
+		{
+			echo 'geen resultaten!';
+		}
+	}
+	private function zoeken_leerling($opdracht)
 	{
 		$con = new Connect();
 		$con->connect();
 		
-		$query = mysql_query($this->returnQ($opdracht));
+		$query = mysql_query($this->returnL($opdracht));
 		$rows=mysql_num_rows($query);
 		if($rows != 0){		
 			while ($row = mysql_fetch_array($query)) {
@@ -25,7 +45,17 @@ Class Zoek
 			echo 'geen resultaten!';
 		}
 	}
-	private function returnQ($opdracht)
+	private function returnO($opdracht)
+	{
+		if(is_numeric($opdracht)){
+			return "SELECT * FROM project WHERE leerling_id like '%$opdracht%' order by leerling_id";
+		}
+		else
+		{
+			return "SELECT * FROM project WHERE naam like '%$opdracht%' order by naam";
+		}
+	}
+	private function returnL($opdracht)
 	{
 		if(is_numeric($opdracht)){
 			return "SELECT * FROM leerling WHERE leerling_id like '%$opdracht%' order by leerling_id";
@@ -39,21 +69,9 @@ Class Zoek
 	{
 		$richt = new Defineer_klas();
 		$klas = $richt->defineer($arr['richting']);
-		$resultaat = "<a href='http://localhost/jaarboek/Profiel.php?id=" . $arr['leerling_id'] . "'>". $arr['leerling_id']. " " . $arr['voornaam']. " ". $arr['tussenvoegsels']. " ". $arr['achternaam']. " ". $klas."</a><br/><br/>";
+		$resultaat = "<a href='profile.php?id=" . $arr['leerling_id'] . "'>". $arr['leerling_id']. " " . $arr['voornaam']. " ". $arr['tussenvoegsels']. " ". $arr['achternaam']. " ". $klas."</a><br/><br/>";
 		
 		return $resultaat;
 	}
-}
-?>
-<form method=post acion=""<?php $_SERVER['PHP_SELF'] ?>"">       
-		<INPUT type="text" name="opdracht">       
-		<input type="submit" value="zoeken" name="submit">
-</form>
-<?
-$zoek = new Zoek();
-
-if(isset($_POST['submit']))
-{
-	$zoek->haal($_POST['opdracht']);
 }
 ?>

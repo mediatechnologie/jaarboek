@@ -1,6 +1,11 @@
 <?php
 Class Connect
 {
+/*	var $user = 'examen'; 
+	var $passw = 'sadef5N8'; 
+	var $server = 'localhost'; 
+	var $database = 'examen_db1';
+*/	
 	var $user = 'root'; 
 	var $passw = ''; 
 	var $server = 'localhost'; 
