@@ -19,26 +19,27 @@
 	<div id="topContainer">
 		<div id="nav">
 			<div id="logo">
-				<a href="#"><img src="images/logo.png" alt="Jaarboek logo"></a>
+				<a href="index.php"><img src="images/logo.png" alt="Jaarboek logo"></a>
 			</div>
 			<ul>
-				<li><a href="#">ALLES</a></li>
-				<li><a href="#">IV</a></li>
-				<li><a href="#">GV</a></li>
-				<li><a href="#">MT</a></li>
-				<li><a href="#">GD</a></li>
-				<li><a href="#">MV</a></li>
-				<li><a href="#">AV</a></li>
-				<li><a href="#">RV</a></li>
+				<li><a href="overview.php?klas=all">ALLES</a></li>
+				<li><a href="overview.php?klas=IV">IV</a></li>
+				<li><a href="overview.php?klas=GV">GV</a></li>
+				<li><a href="overview.php?klas=MT">MT</a></li>
+				<li><a href="overview.php?klas=GD">GD</a></li>
+				<li><a href="overview.php?klas=MV">MV</a></li>
+				<li><a href="overview.php?klas=AV">AV</a></li>
+				<li><a href="overview.php?klas=RV">RV</a></li>
 			</ul>
 			<div id="search">
-			<form method="post">
+			<form method="post" action="search.php">
 				<table border="0">
 					<tr> 
 						<td><input type="text" name="searchBar" size="30"/></td>
-						<td><a href="#"><img src="images/search.png" alt="Logo jaarboek"/></a></td>
+						<td><input type="image" src="images/search.png" alt="Logo jaarboek"/></td>
 					</tr>
 				</table>
+				
 			</form>
 			</div>
 		</div>
