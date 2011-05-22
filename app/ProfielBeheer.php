@@ -9,6 +9,9 @@ class ProfielBeheer
 	//public function __destruct(){vd($this->profiel);}
 	public function __destruct ()
 	{
+		if ( !isset( $_POST['wachtwoord'] ) )
+			return;
+
 		$db  =  new MySQLi( 'localhost' , 'php' , 'php' , 'php_ma-jaarboek' );
 		$_data  =  $this->profiel->data();
 		$pk  =  $_data->pk();
@@ -16,6 +19,7 @@ class ProfielBeheer
 
 		$id  =  $this->profiel->id();
 		//$id  =  1*(''.$this->profiel->id());
+
 		$ww  =  $db->real_escape_string( $_POST['wachtwoord'] );
 		$sql  =  ''
 			. 'SELECT * FROM leerling WHERE'
